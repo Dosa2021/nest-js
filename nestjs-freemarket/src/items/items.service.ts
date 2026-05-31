@@ -17,4 +17,13 @@ export class ItemsService {
     this.items.push(item);
     return item;
   }
+
+  updateStatus(id: string): Item | undefined {
+    const item: Item | undefined = this.findById(id);
+    if (item) {
+      item.status = 'SOLD_OUT';
+      return item;
+    }
+    return undefined;
+  }
 }
