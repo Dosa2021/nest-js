@@ -1,5 +1,7 @@
 <img width="929" height="519" alt="Image" src="https://github.com/user-attachments/assets/222d6e84-9d27-4a39-ae09-9e99d71803d0" />
 
+npm run start:dev
+
 udemy「NestJS入門 TypeScriptではじめるサーバーサイド開発」
 
 NestJSのメリット
@@ -12,3 +14,13 @@ NestJSのメリット
 NestJSのデメリット
 ・情報が少ない
 ・日本語ドキュメントがない
+
+【基本】
+・module作成
+nest g module items
+
+・コントローラー作成
+nest g controller items
+
+・サービス作成
+nest g service items
