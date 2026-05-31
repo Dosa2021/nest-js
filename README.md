@@ -24,3 +24,10 @@ nest g controller items
 
 ・サービス作成
 nest g service items
+
+【講義内容】
+sec3: バリデーションと例外
+・DTO
+・pipe
+・class-validator
+・例外処理
