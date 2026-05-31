@@ -20,3 +20,7 @@ NestJSのデメリット
 nest g module items
 
 ・コントローラー作成
+nest g controller items
+
+・サービス作成
+nest g service items
