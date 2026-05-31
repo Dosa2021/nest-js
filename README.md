@@ -12,3 +12,7 @@ NestJSのメリット
 NestJSのデメリット
 ・情報が少ない
 ・日本語ドキュメントがない
+
+【基本】
+・module作成
+nest g module items
