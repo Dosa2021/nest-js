@@ -49,7 +49,11 @@ export class ItemsService {
     });
   }
 
-  delete(id: string): void {
-    this.items = this.items.filter((item) => item.id !== id);
+  async delete(id: string): Promise<void> {
+    await this.prismaService.item.delete({
+      where: {
+        id,
+      },
+    });
   }
 }
