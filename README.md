@@ -1,6 +1,8 @@
 <img width="929" height="519" alt="Image" src="https://github.com/user-attachments/assets/222d6e84-9d27-4a39-ae09-9e99d71803d0" />
 
 npm run start:dev
+docker compose up
+px prisma studio
 
 udemy「NestJS入門 TypeScriptではじめるサーバーサイド開発」
 
@@ -31,3 +33,9 @@ sec3: バリデーションと例外
 ・pipe
 ・class-validator
 ・例外処理
+
+【入門】DTOって結局ナニをNest.jsで学ぶ
+https://zenn.dev/minateru/articles/afc74c519461a9
+
+sec4: データベース
+・prisma
