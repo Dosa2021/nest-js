@@ -8,8 +8,9 @@ export class ItemsService {
   constructor(private readonly prismaService: PrismaService) {}
   private items: Item[] = [];
 
-  findAll(): Item[] {
-    return this.items;
+  async findAll(): Promise<Item[]> {
+    // return this.items;
+    return await this.prismaService.item.findMany();
   }
 
   findById(id: string): Item | undefined {
