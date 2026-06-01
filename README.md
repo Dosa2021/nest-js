@@ -2,6 +2,7 @@
 
 npm run start:dev
 docker compose up
+px prisma studio
 
 udemy「NestJS入門 TypeScriptではじめるサーバーサイド開発」
 
@@ -35,3 +36,6 @@ sec3: バリデーションと例外
 
 【入門】DTOって結局ナニをNest.jsで学ぶ
 https://zenn.dev/minateru/articles/afc74c519461a9
+
+sec4: データベース
+・prisma
