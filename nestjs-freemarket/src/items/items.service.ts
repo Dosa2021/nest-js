@@ -13,8 +13,12 @@ export class ItemsService {
     return await this.prismaService.item.findMany();
   }
 
-  findById(id: string): Item | undefined {
-    const found = this.items.find((item) => item.id === id);
+  async findById(id: string): Promise<Item> {
+    const found = await this.prismaService.item.findUnique({
+      where: {
+        id,
+      },
+    });
     if (!found) {
       throw new NotFoundException();
     }
@@ -34,14 +38,14 @@ export class ItemsService {
     });
   }
 
-  updateStatus(id: string): Item | undefined {
-    const item: Item | undefined = this.findById(id);
-    if (item) {
-      item.status = 'SOLD_OUT';
-      return item;
-    }
-    return undefined;
-  }
+  // updateStatus(id: string): Item | undefined {
+  //   const item: Item | undefined = this.findById(id);
+  //   if (item) {
+  //     item.status = 'SOLD_OUT';
+  //     return item;
+  //   }
+  //   return undefined;
+  // }
 
   delete(id: string): void {
     this.items = this.items.filter((item) => item.id !== id);
