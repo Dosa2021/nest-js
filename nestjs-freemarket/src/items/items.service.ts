@@ -8,12 +8,17 @@ export class ItemsService {
   constructor(private readonly prismaService: PrismaService) {}
   private items: Item[] = [];
 
-  findAll(): Item[] {
-    return this.items;
+  async findAll(): Promise<Item[]> {
+    // return this.items;
+    return await this.prismaService.item.findMany();
   }
 
-  findById(id: string): Item | undefined {
-    const found = this.items.find((item) => item.id === id);
+  async findById(id: string): Promise<Item> {
+    const found = await this.prismaService.item.findUnique({
+      where: {
+        id,
+      },
+    });
     if (!found) {
       throw new NotFoundException();
     }
@@ -33,16 +38,22 @@ export class ItemsService {
     });
   }
 
-  updateStatus(id: string): Item | undefined {
-    const item: Item | undefined = this.findById(id);
-    if (item) {
-      item.status = 'SOLD_OUT';
-      return item;
-    }
-    return undefined;
+  async updateStatus(id: string): Promise<Item> {
+    return await this.prismaService.item.update({
+      data: {
+        status: ItemStatus.SOLD_OUT,
+      },
+      where: {
+        id,
+      },
+    });
   }
 
-  delete(id: string): void {
-    this.items = this.items.filter((item) => item.id !== id);
+  async delete(id: string): Promise<void> {
+    await this.prismaService.item.delete({
+      where: {
+        id,
+      },
+    });
   }
 }
