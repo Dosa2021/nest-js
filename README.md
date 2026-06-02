@@ -3,7 +3,7 @@
 npm run start:dev
 docker compose up
 
-px prisma studio
+npx prisma studio
 
 udemy「NestJS入門 TypeScriptではじめるサーバーサイド開発」
 
