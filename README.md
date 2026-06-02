@@ -27,6 +27,8 @@ nest g controller items
 ・サービス作成
 nest g service items
 
+nest g resource auth
+
 【講義内容】
 sec3: バリデーションと例外
 ・DTO
