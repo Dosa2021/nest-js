@@ -2,7 +2,8 @@
 
 npm run start:dev
 docker compose up
-px prisma studio
+
+npx prisma studio
 
 udemy「NestJS入門 TypeScriptではじめるサーバーサイド開発」
 
@@ -27,6 +28,8 @@ nest g controller items
 ・サービス作成
 nest g service items
 
+nest g resource auth
+
 【講義内容】
 sec3: バリデーションと例外
 ・DTO
@@ -39,3 +42,18 @@ https://zenn.dev/minateru/articles/afc74c519461a9
 
 sec4: データベース
 ・prisma
+
+sec5:
+・authディレクトリ作成
+nest g resource auth
+
+・userテーブル作成
+npx prisma migrate dev --name addUsser
+
+・CreateUserDto定義
+
+・ユーザー作成機能作成
+・パスワードのハッシュ化
+
+・JWT
+https://qiita.com/asagohan2301/items/cef8bcb969fef9064a5c#5-jwt%E8%AA%8D%E8%A8%BC%E3%81%AE%E6%B5%81%E3%82%8C
