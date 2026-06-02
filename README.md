@@ -54,3 +54,6 @@ npx prisma migrate dev --name addUsser
 
 ・ユーザー作成機能作成
 ・パスワードのハッシュ化
+
+・JWT
+https://qiita.com/asagohan2301/items/cef8bcb969fef9064a5c#5-jwt%E8%AA%8D%E8%A8%BC%E3%81%AE%E6%B5%81%E3%82%8C
