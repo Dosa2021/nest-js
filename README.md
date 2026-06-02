@@ -49,3 +49,5 @@ nest g resource auth
 
 ・userテーブル作成
 npx prisma migrate dev --name addUsser
+
+・CreateUserDto定義
