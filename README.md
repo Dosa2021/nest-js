@@ -2,6 +2,7 @@
 
 npm run start:dev
 docker compose up
+
 px prisma studio
 
 udemy「NestJS入門 TypeScriptではじめるサーバーサイド開発」
@@ -45,3 +46,6 @@ sec4: データベース
 sec5:
 ・authディレクトリ作成
 nest g resource auth
+
+・userテーブル作成
+npx prisma migrate dev --name addUsser
