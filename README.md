@@ -51,3 +51,6 @@ nest g resource auth
 npx prisma migrate dev --name addUsser
 
 ・CreateUserDto定義
+
+・ユーザー作成機能作成
+・パスワードのハッシュ化
