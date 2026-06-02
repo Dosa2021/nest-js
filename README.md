@@ -41,3 +41,7 @@ https://zenn.dev/minateru/articles/afc74c519461a9
 
 sec4: データベース
 ・prisma
+
+sec5:
+・authディレクトリ作成
+nest g resource auth
