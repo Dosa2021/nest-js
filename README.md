@@ -50,3 +50,5 @@ nest g service items
 ・マイグレーション実行err
 npx prisma migrate dev --name init
 → docker再起動
+
+・client password must be a string

@@ -31,10 +31,11 @@ export class ItemsController {
     return await this.itemsService.create(createItemDto);
   }
 
-  @Put(':id')
-  updateStatus(@Param('id', ParseUUIDPipe) id: string): Item | undefined {
-    return this.itemsService.updateStatus(id);
-  }
+  // TODO: 修正
+  // @Put(':id')
+  // updateStatus(@Param('id', ParseUUIDPipe) id: string): Item | undefined {
+  //   return this.itemsService.updateStatus(id);
+  // }
 
   @Delete(':id')
   delete(@Param('id', ParseUUIDPipe) id: string): void {

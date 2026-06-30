@@ -34,11 +34,12 @@ export class ItemsService {
     });
   }
 
-  updateStatus(id: string): Item | undefined {
-    const item = this.findById(id);
-    if (item) item.status = 'SOLD OUT';
-    return item;
-  }
+  // TODO: 修正
+  // updateStatus(id: string): Item | undefined {
+  //   const item = this.findById(id);
+  //   if (item) item.status = 'SOLD OUT';
+  //   return item;
+  // }
 
   delete(id: string): void {
     this.items = this.items.filter((item) => item.id !== id);
