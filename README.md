@@ -37,3 +37,5 @@ nest g service items
 
     ・x コントローラーでnew
     ・o 外部でnewする？
+
+・DTO
