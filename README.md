@@ -3,6 +3,10 @@
 npm run start:dev
 http://localhost:3000/
 
+docker exec -it postgres psql -U nestjsuser fleamarket
+npx prisma migrate dev --name init
+npx prisma studio
+
 udemy「NestJS入門 TypeScriptではじめるサーバーサイド開発」
 
 NestJSのメリット
@@ -40,3 +44,11 @@ nest g service items
 
 ・DTO
 ・Pipe
+
+## トラブル
+
+・マイグレーション実行err
+npx prisma migrate dev --name init
+→ docker再起動
+
+・client password must be a string

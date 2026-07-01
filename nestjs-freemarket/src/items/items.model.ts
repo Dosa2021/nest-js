@@ -1,3 +1,4 @@
+// Note: Prisma実装により不要
 export interface Item {
   id: string;
   name: string;
