@@ -25,7 +25,7 @@ model Item {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
-enum  ItemStatus {
+enum ItemStatus {
   ON_SALE
   SOLD_OUT
 }
