@@ -35,6 +35,13 @@ nest g service items
 
 ・Insomnia（APIクライアント）
 
+## 講座内容
+
+### sec5. セキュリティ
+
+・authモジュールのjwtモジュール登録
+・クレデンシャルdto作成
+
 ## Memo
 
 ・DI（依存性の注入）
@@ -44,6 +51,12 @@ nest g service items
 
 ・DTO
 ・Pipe
+・JWT
+
+    構成要素
+    ・ヘッダ
+    ・ペイロード
+    ・署名
 
 ## トラブル
 
