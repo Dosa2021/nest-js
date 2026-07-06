@@ -7,10 +7,16 @@ import {
   ParseUUIDPipe,
   Post,
   Put,
+  UseGuards,
+  Req,
 } from '@nestjs/common';
 import { ItemsService } from './items.service';
 import { Item } from '../../generated/prisma/client';
 import { CreateItemDto } from './dto/create-item.dto';
+import { AuthGuard } from '@nestjs/passport';
+
+import { Request as ExpressRequest } from 'express';
+import { RequestUser } from 'src/types/requestUser';
 
 @Controller('items')
 export class ItemsController {
@@ -29,8 +35,13 @@ export class ItemsController {
   }
 
   @Post()
-  async create(@Body() createItemDto: CreateItemDto): Promise<Item> {
-    return await this.itemsService.create(createItemDto);
+  @UseGuards(AuthGuard('jwt'))
+  async create(
+    @Body() createItemDto: CreateItemDto,
+    @Req() req: ExpressRequest & { user: RequestUser },
+  ): Promise<Item> {
+    console.log('req-user---------', req.user);
+    return await this.itemsService.create(createItemDto, req.user.id);
   }
 
   @Put(':id')

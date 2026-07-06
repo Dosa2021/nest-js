@@ -35,6 +35,23 @@ nest g service items
 
 ・Insomnia（APIクライアント）
 
+## 講座内容
+
+### sec5. セキュリティ
+
+・authモジュールのjwtモジュール登録
+・クレデンシャルdto作成
+・guard
+・jwtストラテジー
+・NestJSでのjwt認証の流れ
+
+    1 jwtを生成・取得
+    2 クライアントがjwtをauthorizationヘッダーに追加してリクエスト送信
+    3 AuthGuard起動
+    4 jwtの抽出・検証
+    5 jwtからユーザー情報取得・返却
+    6 ルートハンドラーへのアクセス
+
 ## Memo
 
 ・DI（依存性の注入）
@@ -44,6 +61,12 @@ nest g service items
 
 ・DTO
 ・Pipe
+・JWT
+
+    構成要素
+    ・ヘッダ
+    ・ペイロード
+    ・署名
 
 ## トラブル
 
