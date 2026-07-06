@@ -41,6 +41,16 @@ nest g service items
 
 ・authモジュールのjwtモジュール登録
 ・クレデンシャルdto作成
+・guard
+・jwtストラテジー
+・NestJSでのjwt認証の流れ
+
+    1 jwtを生成・取得
+    2 クライアントがjwtをauthorizationヘッダーに追加してリクエスト送信
+    3 AuthGuard起動
+    4 jwtの抽出・検証
+    5 jwtからユーザー情報取得・返却
+    6 ルートハンドラーへのアクセス
 
 ## Memo
 
